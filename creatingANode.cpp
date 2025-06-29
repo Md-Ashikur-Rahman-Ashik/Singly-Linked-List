@@ -6,14 +6,17 @@ class Node
 public:
     int integerValue;
     Node *nextPointer;
+
+    Node(int integerValue)
+    {
+        this->integerValue = integerValue;
+        this->nextPointer = NULL;
+    }
 };
 
 int main()
 {
-    Node firstNode, secondNode, thirdNode;
-    firstNode.integerValue = 10;
-    secondNode.integerValue = 20;
-    thirdNode.integerValue = 30;
+    Node firstNode(10), secondNode(20), thirdNode(30);
 
     firstNode.nextPointer = &secondNode;
     secondNode.nextPointer = &thirdNode;
